@@ -1,0 +1,294 @@
+{
+  "components": {
+    "cpu": [
+      {
+        "name": "AMD Ryzen 5 7600X",
+        "price": 299,
+        "specs": "6 cores, 12 threads, 4.7GHz boost",
+        "buy_link": "https://example.com/amd-ryzen-5-7600x"
+      },
+      {
+        "name": "Intel Core i5-13600K",
+        "price": 329,
+        "specs": "14 cores, 20 threads, 5.1GHz boost",
+        "buy_link": "https://example.com/intel-i5-13600k"
+      },
+      {
+        "name": "AMD Ryzen 7 7700X",
+        "price": 399,
+        "specs": "8 cores, 16 threads, 5.4GHz boost",
+        "buy_link": "https://example.com/amd-ryzen-7-7700x"
+      },
+      {
+        "name": "Intel Core i7-13700K",
+        "price": 449,
+        "specs": "16 cores, 24 threads, 5.4GHz boost",
+        "buy_link": "https://example.com/intel-i7-13700k"
+      },
+      {
+        "name": "AMD Ryzen 9 7900X",
+        "price": 549,
+        "specs": "12 cores, 24 threads, 5.6GHz boost",
+        "buy_link": "https://example.com/amd-ryzen-9-7900x"
+      },
+      {
+        "name": "Intel Core i9-13900K",
+        "price": 599,
+        "specs": "24 cores, 32 threads, 5.8GHz boost",
+        "buy_link": "https://example.com/intel-i9-13900k"
+      },
+      {
+        "name": "AMD Ryzen 5 5600G",
+        "price": 159,
+        "specs": "6 cores, 12 threads, 4.4GHz boost, integrated graphics",
+        "buy_link": "https://example.com/amd-ryzen-5-5600g"
+      }
+    ],
+    "gpu": [
+      {
+        "name": "NVIDIA RTX 4060",
+        "price": 299,
+        "specs": "8GB GDDR6, 1080p gaming",
+        "buy_link": "https://example.com/rtx-4060"
+      },
+      {
+        "name": "NVIDIA RTX 4060 Ti",
+        "price": 399,
+        "specs": "16GB GDDR6, 1440p gaming",
+        "buy_link": "https://example.com/rtx-4060-ti"
+      },
+      {
+        "name": "NVIDIA RTX 4070",
+        "price": 599,
+        "specs": "12GB GDDR6X, 1440p high-end gaming",
+        "buy_link": "https://example.com/rtx-4070"
+      },
+      {
+        "name": "NVIDIA RTX 4070 Ti",
+        "price": 799,
+        "specs": "12GB GDDR6X, 1440p/4K gaming",
+        "buy_link": "https://example.com/rtx-4070-ti"
+      },
+      {
+        "name": "NVIDIA RTX 4080",
+        "price": 1199,
+        "specs": "16GB GDDR6X, 4K gaming",
+        "buy_link": "https://example.com/rtx-4080"
+      },
+      {
+        "name": "AMD RX 7600",
+        "price": 269,
+        "specs": "8GB GDDR6, 1080p gaming",
+        "buy_link": "https://example.com/rx-7600"
+      },
+      {
+        "name": "AMD RX 7700 XT",
+        "price": 449,
+        "specs": "12GB GDDR6, 1440p gaming",
+        "buy_link": "https://example.com/rx-7700-xt"
+      },
+      {
+        "name": "AMD RX 7800 XT",
+        "price": 499,
+        "specs": "16GB GDDR6, 1440p high-end gaming",
+        "buy_link": "https://example.com/rx-7800-xt"
+      },
+      {
+        "name": "Integrated Graphics",
+        "price": 0,
+        "specs": "Basic graphics for office tasks",
+        "buy_link": "https://example.com/integrated-graphics"
+      }
+    ],
+    "ram": [
+      {
+        "name": "Corsair Vengeance LPX 16GB DDR4-3200",
+        "price": 59,
+        "specs": "2x8GB, DDR4-3200, CL16",
+        "buy_link": "https://example.com/corsair-16gb-ddr4"
+      },
+      {
+        "name": "G.Skill Ripjaws V 32GB DDR4-3600",
+        "price": 119,
+        "specs": "2x16GB, DDR4-3600, CL16",
+        "buy_link": "https://example.com/gskill-32gb-ddr4"
+      },
+      {
+        "name": "Corsair Dominator Platinum 32GB DDR5-5600",
+        "price": 199,
+        "specs": "2x16GB, DDR5-5600, CL36",
+        "buy_link": "https://example.com/corsair-32gb-ddr5"
+      },
+      {
+        "name": "G.Skill Trident Z5 64GB DDR5-6000",
+        "price": 379,
+        "specs": "2x32GB, DDR5-6000, CL36",
+        "buy_link": "https://example.com/gskill-64gb-ddr5"
+      },
+      {
+        "name": "Kingston Fury Beast 16GB DDR4-3200",
+        "price": 49,
+        "specs": "2x8GB, DDR4-3200, CL16",
+        "buy_link": "https://example.com/kingston-16gb-ddr4"
+      },
+      {
+        "name": "Crucial Ballistix 32GB DDR4-3600",
+        "price": 99,
+        "specs": "2x16GB, DDR4-3600, CL16",
+        "buy_link": "https://example.com/crucial-32gb-ddr4"
+      }
+    ],
+    "storage": [
+      {
+        "name": "Samsung 980 1TB NVMe SSD",
+        "price": 79,
+        "specs": "1TB NVMe PCIe 3.0, 3,500MB/s read",
+        "buy_link": "https://example.com/samsung-980-1tb"
+      },
+      {
+        "name": "WD Black SN850X 2TB NVMe SSD",
+        "price": 199,
+        "specs": "2TB NVMe PCIe 4.0, 7,300MB/s read",
+        "buy_link": "https://example.com/wd-black-2tb"
+      },
+      {
+        "name": "Crucial MX4 1TB SATA SSD",
+        "price": 69,
+        "specs": "1TB SATA III, 560MB/s read",
+        "buy_link": "https://example.com/crucial-mx4-1tb"
+      },
+      {
+        "name": "Seagate Barracuda 2TB HDD",
+        "price": 54,
+        "specs": "2TB 7200RPM, 256MB cache",
+        "buy_link": "https://example.com/seagate-2tb-hdd"
+      },
+      {
+        "name": "Samsung 990 PRO 2TB NVMe SSD",
+        "price": 249,
+        "specs": "2TB NVMe PCIe 4.0, 7,450MB/s read",
+        "buy_link": "https://example.com/samsung-990-pro-2tb"
+      },
+      {
+        "name": "Kingston NV2 500GB NVMe SSD",
+        "price": 39,
+        "specs": "500GB NVMe PCIe 4.0, 3,500MB/s read",
+        "buy_link": "https://example.com/kingston-nv2-500gb"
+      }
+    ],
+    "motherboard": [
+      {
+        "name": "MSI B650M PRO-VDH WiFi",
+        "price": 109,
+        "specs": "AM5, DDR5, WiFi 6E, mATX",
+        "buy_link": "https://example.com/msi-b650m-pro-vdh"
+      },
+      {
+        "name": "ASUS ROG STRIX B550-F Gaming WiFi",
+        "price": 189,
+        "specs": "AM4, DDR4, WiFi 6, ATX",
+        "buy_link": "https://example.com/asus-b550-f-gaming"
+      },
+      {
+        "name": "MSI Z790 Tomahawk WiFi",
+        "price": 279,
+        "specs": "LGA1700, DDR5, WiFi 6E, ATX",
+        "buy_link": "https://example.com/msi-z790-tomahawk"
+      },
+      {
+        "name": "ASRock B450M PRO4",
+        "price": 79,
+        "specs": "AM4, DDR4, no WiFi, mATX",
+        "buy_link": "https://example.com/asrock-b450m-pro4"
+      },
+      {
+        "name": "Gigabyte X670E AORUS Master",
+        "price": 499,
+        "specs": "AM5, DDR5, WiFi 6E, ATX",
+        "buy_link": "https://example.com/gigabyte-x670e-aorus"
+      },
+      {
+        "name": "ASUS PRIME H610M-A WiFi",
+        "price": 99,
+        "specs": "LGA1700, DDR4, WiFi 6, mATX",
+        "buy_link": "https://example.com/asus-h610m-a-wifi"
+      }
+    ],
+    "psu": [
+      {
+        "name": "Corsair CV650 650W 80+ Bronze",
+        "price": 59,
+        "specs": "650W, 80+ Bronze, non-modular",
+        "buy_link": "https://example.com/corsair-cv650"
+      },
+      {
+        "name": "EVGA SuperNOVA 750 G5 750W 80+ Gold",
+        "price": 99,
+        "specs": "750W, 80+ Gold, fully modular",
+        "buy_link": "https://example.com/evga-750-g5"
+      },
+      {
+        "name": "Seasonic Focus GX-850 850W 80+ Gold",
+        "price": 139,
+        "specs": "850W, 80+ Gold, fully modular",
+        "buy_link": "https://example.com/seasonic-focus-gx-850"
+      },
+      {
+        "name": "Corsair RM1000x 1000W 80+ Gold",
+        "price": 179,
+        "specs": "1000W, 80+ Gold, fully modular",
+        "buy_link": "https://example.com/corsair-rm1000x"
+      },
+      {
+        "name": "Thermaltake Smart 500W 80+ White",
+        "price": 39,
+        "specs": "500W, 80+ White, non-modular",
+        "buy_link": "https://example.com/thermaltake-smart-500"
+      },
+      {
+        "name": "be quiet! Pure Power 11 600W 80+ Gold",
+        "price": 89,
+        "specs": "600W, 80+ Gold, semi-modular",
+        "buy_link": "https://example.com/bequiet-pure-power-600"
+      }
+    ],
+    "case": [
+      {
+        "name": "Fractal Design Core 1000",
+        "price": 49,
+        "specs": "mATX, basic airflow, 2x fans included",
+        "buy_link": "https://example.com/fractal-core-1000"
+      },
+      {
+        "name": "Corsair 4000D Airflow",
+        "price": 99,
+        "specs": "ATX, excellent airflow, 2x fans included",
+        "buy_link": "https://example.com/corsair-4000d"
+      },
+      {
+        "name": "NZXT H510 Elite",
+        "price": 149,
+        "specs": "ATX, tempered glass, RGB lighting",
+        "buy_link": "https://example.com/nzxt-h510-elite"
+      },
+      {
+        "name": "Cooler Master MasterBox Q300L",
+        "price": 39,
+        "specs": "mATX, compact design, 1x fan included",
+        "buy_link": "https://example.com/coolermaster-q300l"
+      },
+      {
+        "name": "Lian Li PC-O11 Dynamic",
+        "price": 159,
+        "specs": "ATX, dual chamber, premium build quality",
+        "buy_link": "https://example.com/lianli-o11-dynamic"
+      },
+      {
+        "name": "Phanteks Eclipse P400A",
+        "price": 89,
+        "specs": "ATX, mesh front panel, 3x fans included",
+        "buy_link": "https://example.com/phanteks-p400a"
+      }
+    ]
+  }
+}

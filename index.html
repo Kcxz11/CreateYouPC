@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CreateYouPC - Construye tu PC perfecta con IA</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <h1>CreateYouPC</h1>
+                <span class="ai-badge">AI</span>
+            </div>
+            <nav class="nav">
+                <a href="#home">Inicio</a>
+                <a href="#how-it-works">Cómo funciona</a>
+                <a href="#build">Crear PC</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h2 class="hero-title">Construye tu PC perfecta con <span class="gradient-text">Inteligencia Artificial</span></h2>
+                <p class="hero-subtitle">Dinos tu presupuesto y uso, y nuestra IA creará la configuración ideal para ti</p>
+                <a href="#build" class="cta-button">Crear mi PC ahora</a>
+            </div>
+            <div class="hero-visual">
+                <div class="pc-illustration">
+                    <div class="pc-case">
+                        <div class="pc-component cpu"></div>
+                        <div class="pc-component gpu"></div>
+                        <div class="pc-component ram"></div>
+                        <div class="pc-component storage"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How it works -->
+    <section id="how-it-works" class="how-it-works">
+        <div class="container">
+            <h2>¿Cómo funciona?</h2>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">1</div>
+                    <h3>Dinos tu presupuesto</h3>
+                    <p>Ingresa cuánto quieres gastar en tu nueva PC</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">2</div>
+                    <h3>Selecciona el uso</h3>
+                    <p>Gaming, diseño, oficina o streaming</p>
+                </div>
+                <div class="step">
+                    <div class="step-number">3</div>
+                    <h3>Recibe tu build</h3>
+                    <p>Nuestra IA optimiza cada componente para tu caso específico</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Build Form -->
+    <section id="build" class="build-section">
+        <div class="container">
+            <h2>Crear tu PC personalizada</h2>
+            <div class="build-container">
+                <div class="form-container">
+                    <form id="buildForm" class="build-form">
+                        <div class="form-group">
+                            <label for="budget">Presupuesto en USD</label>
+                            <input type="number" id="budget" name="budget" min="300" max="10000" placeholder="ej: 1500" required>
+                            <span class="form-hint">Mínimo: $300 USD</span>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="use_type">Tipo de uso</label>
+                            <select id="use_type" name="use_type" required>
+                                <option value="">Selecciona el uso principal</option>
+                                <option value="gaming">Gaming</option>
+                                <option value="design">Diseño gráfico/3D</option>
+                                <option value="office">Oficina/Trabajo</option>
+                                <option value="streaming">Streaming/Creación de contenido</option>
+                            </select>
+                        </div>
+
+                        <button type="submit" class="submit-btn">
+                            <span class="btn-text">Generar mi PC</span>
+                            <div class="loader hidden"></div>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- Build Results -->
+                <div id="buildResults" class="build-results hidden">
+                    <h3>Tu Build Sugerida</h3>
+                    <div class="build-summary">
+                        <div class="summary-item">
+                            <span class="label">Presupuesto:</span>
+                            <span id="resultBudget" class="value">$0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Precio total:</span>
+                            <span id="resultTotal" class="value">$0</span>
+                        </div>
+                        <div class="summary-item">
+                            <span class="label">Uso:</span>
+                            <span id="resultUse" class="value">-</span>
+                        </div>
+                    </div>
+                    
+                    <div id="componentsList" class="components-list">
+                        <!-- Los componentes se llenarán dinámicamente -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 CreateYouPC. Creado con ❤️ y inteligencia artificial.</p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Animaciones de scroll suave
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Animación de componentes de PC
+        function animatePC() {
+            const components = document.querySelectorAll('.pc-component');
+            components.forEach((component, index) => {
+                setTimeout(() => {
+                    component.style.opacity = '1';
+                    component.style.transform = 'translateY(0)';
+                }, index * 200);
+            });
+        }
+
+        // Inicializar animaciones cuando se carga la página
+        window.addEventListener('load', animatePC);
+
+        // Manejo del formulario
+        document.getElementById('buildForm').addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const budget = document.getElementById('budget').value;
+            const useType = document.getElementById('use_type').value;
+            
+            if (!budget || !useType) {
+                alert('Por favor, completa todos los campos');
+                return;
+            }
+
+            // Mostrar loader
+            const submitBtn = document.querySelector('.submit-btn');
+            const btnText = document.querySelector('.btn-text');
+            const loader = document.querySelector('.loader');
+            
+            submitBtn.disabled = true;
+            btnText.textContent = 'Generando...';
+            loader.classList.remove('hidden');
+
+            try {
+                const response = await fetch('/api/build', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({
+                        budget: parseInt(budget),
+                        use_type: useType
+                    })
+                });
+
+                const data = await response.json();
+
+                if (data.error) {
+                    alert(data.error);
+                    return;
+                }
+
+                // Mostrar resultados
+                displayBuildResults(data);
+
+            } catch (error) {
+                console.error('Error:', error);
+                alert('Error al generar la build. Intenta nuevamente.');
+            } finally {
+                // Ocultar loader
+                submitBtn.disabled = false;
+                btnText.textContent = 'Generar mi PC';
+                loader.classList.add('hidden');
+            }
+        });
+
+        function displayBuildResults(data) {
+            const resultsContainer = document.getElementById('buildResults');
+            const componentsList = document.getElementById('componentsList');
+            
+            // Actualizar resumen
+            document.getElementById('resultBudget').textContent = `$${data.budget}`;
+            document.getElementById('resultTotal').textContent = `$${data.total_price}`;
+            document.getElementById('resultUse').textContent = data.use_type;
+
+            // Limpiar lista de componentes
+            componentsList.innerHTML = '';
+
+            // Mapeo de nombres de componentes
+            const componentNames = {
+                'cpu': 'Procesador',
+                'gpu': 'Tarjeta Gráfica',
+                'ram': 'Memoria RAM',
+                'storage': 'Almacenamiento',
+                'motherboard': 'Placa Madre',
+                'psu': 'Fuente de Poder',
+                'case': 'Gabinete'
+            };
+
+            // Crear elementos para cada componente
+            Object.entries(data.build).forEach(([type, component]) => {
+                const componentCard = document.createElement('div');
+                componentCard.className = 'component-card';
+                componentCard.innerHTML = `
+                    <div class="component-header">
+                        <h4>${componentNames[type] || type}</h4>
+                        <span class="component-price">$${component.price}</span>
+                    </div>
+                    <div class="component-details">
+                        <p class="component-name">${component.name}</p>
+                        <p class="component-specs">${component.specs}</p>
+                        <a href="${component.buy_link}" class="buy-link" target="_blank">Ver producto</a>
+                    </div>
+                `;
+                componentsList.appendChild(componentCard);
+            });
+
+            // Mostrar resultados con animación
+            resultsContainer.classList.remove('hidden');
+            resultsContainer.scrollIntoView({ behavior: 'smooth' });
+        }
+
+        // Animación de números contador
+        function animateCountUp(element, start, end, duration) {
